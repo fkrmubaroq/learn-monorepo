@@ -1,0 +1,23 @@
+{
+    "name": "@fkrmubaroq",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "concurrently \"npm run dev:*\" -—kill-others-on-fail",
+        "dev:utils": "npm run dev -w @fkrmubaroq/utils",
+        "dev:blog": "npm run dev -w @fkrmubaroq/blog",
+        "dev:dashboard": "npm run dev -w @fkrmubaroq/dashboard"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "workspaces": [
+        "apps/*",
+        "libs/*"
+    ],
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
